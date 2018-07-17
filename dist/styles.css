@@ -17,31 +17,73 @@ body {
     height: 100%;
 }
 
-.leaflet-tooltip {
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-    color: white;
-    font-size: 18px;
-    font-family: 'Chela One';
-    letter-spacing: 3px;
-    text-shadow:
-        -2px -2px 0 #000,
-         2px -2px 0 #000,
-        -2px  2px 0 #000,
-         2px  2px 0 #000;
-    text-align: center;
-    line-height: 20px;
-}
-.leaflet-tooltip-bottom::before { display: none; }
+    .leaflet-tooltip {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        color: white;
+        font-size: 18px;
+        font-family: 'Acme';
+        text-shadow:
+            -2px -2px 0 #000,
+             2px -2px 0 #000,
+            -2px  2px 0 #000,
+             2px  2px 0 #000;
+        text-align: center;
+        line-height: 20px;
+    }
+    .leaflet-tooltip-bottom::before { display: none; }
 
-.leaflet-popup-content-wrapper {
-    border-radius: 6px;
+    .leaflet-popup-content-wrapper {
+        border-radius: 6px;
+    }
+    .leaflet-popup-content {
+        margin: 4px 8px;
+        font-family: 'Acme';
+        font-size: 14px;
+        text-align: center;
+    }
+    .leaflet-popup-close-button { display: none; }
+
+#sidebar {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    z-index: 10000;
 }
-.leaflet-popup-content {
-    margin: 4px 8px;
-    font-family: 'Chela One';
-    font-size: 14px;
-    text-align: center;
+
+.sidebar_panel {
+    background: rgba(50,50,50,0.9);
+    border-top: 5px solid #39ff14;
+    width: 275px;
+    padding: 10px;
+    color: white;
+    font-family: 'Cinzel', sans-serif;
+    margin-top: 10px;
 }
-.leaflet-popup-close-button { display: none; }
+.sidebar_panel small {
+    color: #ccc;
+    font-style: italic;
+}
+.sidebar_panel h3 {
+    font-family: 'Cinzel', serif;
+}
+.sidebar_panel ul {
+    padding-left: 20px;
+}
+.sidebar_panel ul li {
+    cursor: pointer;
+    list-style: none;
+}
+.sidebar_panel ul li img {
+    width: 20px;
+}
+
+.server_owner { color: #9b64b5; }
+.server_moderator { color: #5dc284; }
+.server_donor { color: #63c6ff; }
+.server_member { color: #ffef40; }
+
+.d-flex { display: flex; }
+.flex-1 { flex: 1; }
+.align-items-center { align-items: center; }
